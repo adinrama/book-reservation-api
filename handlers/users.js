@@ -3,21 +3,26 @@ const users = require("../utils/users");
 const login = (request, h) => {
   const { email, password } = request.payload;
 
-  for (i = 0; i < users.length; i++) {
-    if (users[i].email == email && users[i].password == password) {
-      return h
-        .response({
-          message: "Login successfully",
-          status: "Success",
-        })
-        .code(200);
+  try {
+    for (i = 0; i < users.length; i++) {
+      if (users[i].email == email && users[i].password == password) {
+        return h
+          .response({
+            message: "Login successfully",
+            status: "Success",
+          })
+          .code(200);
+      }
     }
+  } catch (err) {
+    return h
+      .response({
+        message: "Invalid credentials",
+        status: "Failed",
+        ...err.message,
+      })
+      .code(401);
   }
-
-  h.response({
-    message: "Invalid credentials",
-    status: "Failed",
-  }).code(401);
 };
 
 const register = (request, h) => {
@@ -38,22 +43,26 @@ const register = (request, h) => {
   const newUser = { id, name, email, password, gender, roles, address };
   users.push(newUser);
 
-  const isSuccess = users.filter((user) => user.email === email).length > 0;
+  try {
+    const isSuccess = users.filter((user) => user.email === email).length > 0;
 
-  if (isSuccess) {
+    if (isSuccess) {
+      return h
+        .response({
+          message: "Register successfully",
+          status: "Success",
+          newUser,
+        })
+        .code(201);
+    }
+  } catch (err) {
     return h
       .response({
-        message: "Register successfully",
-        status: "Success",
-        newUser,
+        message: "Register failed",
+        status: "Failed",
       })
-      .code(201);
+      .code(500);
   }
-
-  h.response({
-    message: "Register failed",
-    status: "Failed",
-  }).code(500);
 };
 
 module.exports = { login, register };
