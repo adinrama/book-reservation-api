@@ -1,8 +1,5 @@
-const { nanoid } = require("nanoid");
-
-const users = [
+module.exports = [
   {
-    id: nanoid(10),
     name: "Al Fajri Yunus",
     email: "fajri@gmail.com",
     password: "fajri1234",
@@ -11,7 +8,6 @@ const users = [
     address: "Jl. Simpang Waringin No. 13A, Moyoketen",
   },
   {
-    id: nanoid(10),
     name: "Bima Antasena",
     email: "bima@gmail.com",
     password: "bima1234",
@@ -20,5 +16,3 @@ const users = [
     address: "Jl. Ahmad Dahlan, Kabupaten Sleman",
   },
 ];
-
-module.exports = users;
