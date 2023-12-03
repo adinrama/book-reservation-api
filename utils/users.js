@@ -1,4 +1,4 @@
-module.exports = [
+const users = [
   {
     name: "Al Fajri Yunus",
     email: "fajri@gmail.com",
@@ -16,3 +16,5 @@ module.exports = [
     address: "Jl. Ahmad Dahlan, Kabupaten Sleman",
   },
 ];
+
+module.exports = users;
