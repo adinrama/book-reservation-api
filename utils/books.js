@@ -1,5 +1,6 @@
 const books = [
   {
+    id: 1,
     title: "Design Patterns: Elements of Reusable Object-Oriented Software",
     type: "technology",
     author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
@@ -8,6 +9,7 @@ const books = [
     page_counts: 416,
   },
   {
+    id: 2,
     title: "Clean Coder Conduct Professional Programmers",
     type: "technology",
     author: "Robert Cecil Martin",
@@ -16,6 +18,7 @@ const books = [
     page_counts: 256,
   },
   {
+    id: 3,
     title: "Introduction to Algorithms",
     type: "technology",
     author:
@@ -25,6 +28,7 @@ const books = [
     page_counts: 1292,
   },
   {
+    id: 4,
     title: "The Pragmatic Programmer",
     type: "technology",
     author: "Andrew Hunt, David Thomas",
@@ -33,6 +37,7 @@ const books = [
     page_counts: 352,
   },
   {
+    id: 5,
     title: "Refactoring: Improving the Design of Existing Code",
     type: "technology",
     author: "Martin Fowler",
