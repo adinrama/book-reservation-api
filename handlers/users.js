@@ -60,6 +60,7 @@ const register = (request, h) => {
       .response({
         message: "Register failed",
         status: "Failed",
+        error: err.message,
       })
       .code(500);
   }
