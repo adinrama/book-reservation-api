@@ -39,7 +39,7 @@ const register = (request, h) => {
     }
   }
 
-  const id = ++users[users.length - 1].id;
+  const id = users[users.length - 1].id + 1;
   const newUser = { id, name, email, password, gender, roles, address };
   users.push(newUser);
 
