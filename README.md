@@ -1,6 +1,6 @@
 # Books Reservation API
 
-The following steps will guide you through the installation process of Mini Project API Presentation for running in a development environment locally on your machine:
+The following steps will guide you through the installation process of Books Reservation API for running in a development environment locally on your machine:
 1. Clone the latest version of this api project from the repository
 2. Run `npm install pnpm` to install the package manager
 3. Run `pnpm install` to install the required Node.js dependencies
