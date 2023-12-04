@@ -10,23 +10,23 @@ The following steps will guide you through the installation process of Books Res
 
 ### Path Usage
 
-User Login : Method `POST`
-/v1/users/login
+- User Login : Method `POST`
+  - /v1/users/login
 
-User Register : Method `POST`
-/v1/users/register
+- User Register : Method `POST`
+  - /v1/users/register
 
-Get All Books : Method `GET`
-/v1/books
+- Get All Books : Method `GET`
+  - /v1/books
 
-Get Book By Id : Method `GET`
-/v1/books/{book id}
+- Get Book By Id : Method `GET`
+  - /v1/books/{book id}
 
-Add New Book : Method `POST`
-/v1/books
+- Add New Book : Method `POST`
+  - /v1/books
 
-Update Book By Id : Method `PUT`
-/v1/books/{book id}
+- Update Book By Id : Method `PUT`
+  - /v1/books/{book id}
 
-Remove Book By Id : Method `DELETE`
-/v1/books/{book id}
+- Remove Book By Id : Method `DELETE`
+  - /v1/books/{book id}
