@@ -5,7 +5,7 @@ The following steps will guide you through the installation process of Books Res
 1. Clone the latest version of this api project from the repository
 2. Run `npm install` to install the required Node.js dependencies
 3. Run `npm start` or `npm run dev` to start the server on localhost
-4. Open your browser and go to `http://127.0.0.1:3001/books-reservation-api-docs` to view the documentation from this api (maintenance)
+4. Open your browser and go to `http://127.0.0.1:3001/documentation` to view the documentation from this api (maintenance)
 
 ### Path Usage
 
