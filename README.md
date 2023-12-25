@@ -9,6 +9,9 @@ The following steps will guide you through the installation process of Book Rese
 
 ### Path Usage
 
+- Get All Users : Method `GET`
+  - /v1/users
+
 - User Login : Method `POST`
   - /v1/users/login
 
