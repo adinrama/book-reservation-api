@@ -14,14 +14,21 @@ const login = (request, h) => {
           .code(200);
       }
     }
-  } catch (err) {
+
     return h
       .response({
         message: "Invalid credentials",
         status: "Failed",
-        ...err.message,
       })
       .code(401);
+  } catch (err) {
+    return h
+      .response({
+        message: "Server error",
+        status: "Failed",
+        ...err.message,
+      })
+      .code(500);
   }
 };
 
@@ -58,7 +65,7 @@ const register = (request, h) => {
   } catch (err) {
     return h
       .response({
-        message: "Register failed",
+        message: "Server error",
         status: "Failed",
         error: err.message,
       })
