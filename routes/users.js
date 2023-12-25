@@ -7,7 +7,7 @@ const routes = [
     path: "/v1/users/login",
     options: {
       handler: login,
-      description: "Endpoint to user login",
+      description: "Endpoint for user login",
       notes: "Enter the email and password to login",
       tags: ["api", "users"],
       plugins: {
@@ -28,7 +28,7 @@ const routes = [
     path: "/v1/users/register",
     options: {
       handler: register,
-      description: "Endpoint to user register",
+      description: "Endpoint for user register",
       notes:
         "Fill in the attributes of name, email, password, gender, roles, and address",
       tags: ["api", "users"],
