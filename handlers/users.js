@@ -1,5 +1,12 @@
 const users = require("../utils/users");
 
+const getAllUsers = (request, h) => {
+  return h.response({
+    message: "Success retrieve all users data",
+    users,
+  });
+};
+
 const login = (request, h) => {
   const { email, password } = request.payload;
 
@@ -73,4 +80,4 @@ const register = (request, h) => {
   }
 };
 
-module.exports = { login, register };
+module.exports = { getAllUsers, login, register };

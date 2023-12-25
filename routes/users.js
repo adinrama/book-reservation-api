@@ -1,7 +1,17 @@
 const Joi = require("joi");
-const { login, register } = require("../handlers/users");
+const { getAllUsers, login, register } = require("../handlers/users");
 
 const routes = [
+  {
+    method: "GET",
+    path: "/v1/users",
+    options: {
+      handler: getAllUsers,
+      description: "Endpoint for get all users data",
+      notes: "Execute to see the result",
+      tags: ["api", "users"],
+    },
+  },
   {
     method: "POST",
     path: "/v1/users/login",
