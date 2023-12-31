@@ -45,6 +45,52 @@ const books = [
     publish_year: "November 30, 2018",
     page_counts: 448,
   },
+  {
+    id: 6,
+    title: "The Soul of a New Machine",
+    type: "technology",
+    author: "Tracy Kidder",
+    publisher: "Back Bay Books",
+    publish_year: "June 1, 2000",
+    page_counts: 320,
+  },
+  {
+    id: 7,
+    title: "In the Plex: How Google Thinks, Works, and Shapes Our Lives",
+    type: "technology",
+    author: "Steven Levy",
+    publisher: "Simon & Schuster",
+    publish_year: "February 2, 2021",
+    page_counts: 464,
+  },
+  {
+    id: 8,
+    title: "The Code: Silicon Valley and the Remaking of America",
+    type: "technology",
+    author: "Margaret O'Mara",
+    publisher: "Penguin Books",
+    publish_year: "July 7, 2020",
+    page_counts: 512,
+  },
+  {
+    id: 9,
+    title:
+      "Master Your Code: The Art, Wisdom, and Science of Leading an Extraordinary Life",
+    type: "technology",
+    author: "Darren J. Gold",
+    publisher: "Kindle",
+    publish_year: "September 24, 2019",
+    page_counts: 220,
+  },
+  {
+    id: 10,
+    title: "AI Superpowers: China, Silicon Valley, and the New World Order",
+    type: "technology",
+    author: "Kai-Fu Lee",
+    publisher: "Harper Business",
+    publish_year: "September 25, 2018",
+    page_counts: 272,
+  },
 ];
 
 module.exports = books;
