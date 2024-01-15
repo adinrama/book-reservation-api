@@ -1,4 +1,9 @@
-const { login, register, getAllUsers } = require("../handlers/users");
+const {
+  login,
+  register,
+  getAllUsers,
+  getUserById,
+} = require("../handlers/users");
 
 const routes = [
   {
@@ -20,6 +25,13 @@ const routes = [
     path: "/v1/users",
     options: {
       handler: getAllUsers,
+    },
+  },
+  {
+    method: "GET",
+    path: "/v1/users/{id}",
+    options: {
+      handler: getUserById,
     },
   },
 ];

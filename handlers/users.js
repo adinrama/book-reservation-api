@@ -7,6 +7,39 @@ const getAllUsers = (request, h) => {
   });
 };
 
+const getUserById = (request, h) => {
+  const { id } = request.params;
+
+  try {
+    for (i = 0; i < users.length; i++) {
+      if (users[i].id == id) {
+        return h
+          .response({
+            message: `User with id ${id} successfully found`,
+            status: "Success",
+            user: users[i],
+          })
+          .code(200);
+      }
+    }
+
+    return h
+      .response({
+        message: `User with id ${id} not found`,
+        status: "Failed",
+      })
+      .code(404);
+  } catch (err) {
+    return h
+      .response({
+        message: `Can't find user with id ${id}`,
+        status: "Failed",
+        error: err.message,
+      })
+      .code(500);
+  }
+};
+
 const login = (request, h) => {
   const { email, password } = request.payload;
 
@@ -80,4 +113,4 @@ const register = (request, h) => {
   }
 };
 
-module.exports = { getAllUsers, login, register };
+module.exports = { getAllUsers, getUserById, login, register };
