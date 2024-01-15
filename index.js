@@ -1,6 +1,8 @@
 require("dotenv").config();
 const Hapi = require("@hapi/hapi");
 const HapiCors = require("hapi-cors");
+const HapiJwt = require("hapi-auth-jwt2");
+const validate = require("./auth/validate");
 
 const userRoutes = require("./routes/users");
 const bookRoutes = require("./routes/books");
@@ -17,6 +19,12 @@ const init = async () => {
     options: {
       origins: ["*"],
     },
+  });
+
+  await server.register(HapiJwt);
+  server.auth.strategy("jwt", "jwt", {
+    key: process.env.SECRET_KEY,
+    validate,
   });
 
   server.route(userRoutes);

@@ -1,3 +1,5 @@
+require("dotenv").config();
+const jwt = require("jsonwebtoken");
 const users = require("../utils/users");
 
 const getAllUsers = (request, h) => {
@@ -46,10 +48,21 @@ const login = (request, h) => {
   try {
     for (i = 0; i < users.length; i++) {
       if (users[i].email == email && users[i].password == password) {
+        const token = jwt.sign(
+          {
+            id: users[i].id,
+            email: users[i].email,
+            roles: users[i].roles,
+          },
+          process.env.SECRET_KEY,
+          { expiresIn: "24h" }
+        );
+
         return h
           .response({
             message: "Login successfully",
             status: "Success",
+            token: token,
           })
           .code(200);
       }
