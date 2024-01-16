@@ -4,6 +4,7 @@ const HapiCors = require("hapi-cors");
 const HapiJwt = require("hapi-auth-jwt2");
 const validate = require("./auth/validate");
 
+const homeRoute = require("./routes/home");
 const userRoutes = require("./routes/users");
 const bookRoutes = require("./routes/books");
 
@@ -27,6 +28,7 @@ const init = async () => {
     validate,
   });
 
+  server.route(homeRoute);
   server.route(userRoutes);
   server.route(bookRoutes);
 
