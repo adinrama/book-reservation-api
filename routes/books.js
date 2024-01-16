@@ -4,6 +4,7 @@ const {
   addNewBook,
   updateBookById,
   deleteBookById,
+  sorting,
 } = require("../handlers/books");
 
 const routes = [
@@ -40,6 +41,13 @@ const routes = [
     path: "/v1/books/{id}",
     options: {
       handler: deleteBookById,
+    },
+  },
+  {
+    method: "GET",
+    path: "/v1/books/sort",
+    options: {
+      handler: sorting,
     },
   },
 ];

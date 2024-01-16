@@ -170,10 +170,104 @@ const deleteBookById = (request, h) => {
   }
 };
 
+const sorting = (request, h) => {
+  const { sort, by } = request.query;
+
+  const sortByDescending = (bookArray, property) => {
+    const n = bookArray.length;
+
+    for (i = 0; i < n - 1; i++) {
+      for (j = 0; j < n - 1 - i; j++) {
+        if (bookArray[j][property] < bookArray[j + 1][property]) {
+          const temp = bookArray[j];
+          bookArray[j] = bookArray[j + 1];
+          bookArray[j + 1] = temp;
+        }
+      }
+    }
+
+    return bookArray;
+  };
+
+  const sortByAscending = (bookArray, property) => {
+    const n = bookArray.length;
+
+    for (i = 0; i < n - 1; i++) {
+      for (j = 0; j < n - 1 - i; j++) {
+        if (bookArray[j][property] > bookArray[j + 1][property]) {
+          const temp = bookArray[j];
+          bookArray[j] = bookArray[j + 1];
+          bookArray[j + 1] = temp;
+        }
+      }
+    }
+
+    return bookArray;
+  };
+
+  try {
+    if (sort === "desc".toLowerCase() && by === "title".toLowerCase()) {
+      return h
+        .response({
+          message: "Successfully sorting books with descending order by title",
+          status: "Success",
+          book: sortByDescending([...books], "title"),
+        })
+        .code(200);
+    }
+
+    if (sort === "asc".toLowerCase() && by === "title".toLowerCase()) {
+      return h
+        .response({
+          message: "Successfully sorting books with ascending order by title",
+          status: "Success",
+          book: sortByAscending([...books], "title"),
+        })
+        .code(200);
+    }
+
+    if (sort === "desc".toLowerCase() && by === "author".toLowerCase()) {
+      return h
+        .response({
+          message: "Successfully sorting books with descending order by author",
+          status: "Success",
+          book: sortByDescending([...books], "author"),
+        })
+        .code(200);
+    }
+
+    if (sort === "asc".toLowerCase() && by === "author".toLowerCase()) {
+      return h
+        .response({
+          message: "Successfully sorting books with ascending order by author",
+          status: "Success",
+          book: sortByAscending([...books], "author"),
+        })
+        .code(200);
+    }
+
+    return h
+      .response({
+        message: "Query is wrong",
+        status: "Failed",
+      })
+      .code(404);
+  } catch (err) {
+    return h
+      .response({
+        message: `Can't find book with id ${id}`,
+        status: "Failed",
+        error: err.message,
+      })
+      .code(500);
+  }
+};
+
 module.exports = {
   getAllBooks,
   getBookById,
   addNewBook,
   updateBookById,
   deleteBookById,
+  sorting,
 };
