@@ -42,4 +42,21 @@ The following steps will guide you through the installation process of Book Rese
   - /v1/books/{book id}
 
 - Remove Book By Id : Method `DELETE`
+
   - /v1/books/{book id}
+
+- Sorting Books with Ascending Order by Title : Method `GET`
+
+  - /v1/books/sort?{sort=asc&by=title}
+
+- Sorting Books with Descending Order by Title : Method `GET`
+
+  - /v1/books/sort?{sort=desc&by=title}
+
+- Sorting Books with Ascending Order by Author : Method `GET`
+
+  - /v1/books/sort?{sort=asc&by=author}
+
+- Sorting Books with Descending Order by Title : Method `GET`
+
+  - /v1/books/sort?{sort=desc&by=author}
