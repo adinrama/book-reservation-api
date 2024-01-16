@@ -1,10 +1,12 @@
 const books = require("../utils/books");
 
 const getAllBooks = (request, h) => {
-  return h.response({
-    status: "Success",
-    books,
-  });
+  return h
+    .response({
+      status: "Success",
+      books,
+    })
+    .code(200);
 };
 
 const getBookById = (request, h) => {
