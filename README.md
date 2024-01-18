@@ -21,7 +21,7 @@ You can fetch this data with any kind of tools you know (fetch API, Axios, JQuer
 ### Get all users
 
 ```js
-fetch("http://localhost:3001/v1/users")
+fetch("https://book-reservation-api.vercel.app/v1/users")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -29,7 +29,7 @@ fetch("http://localhost:3001/v1/users")
 ### Get a single user
 
 ```js
-fetch("http://localhost:3001/v1/users/1")
+fetch("https://book-reservation-api.vercel.app/v1/users/1")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -37,7 +37,7 @@ fetch("http://localhost:3001/v1/users/1")
 ### Register a new user
 
 ```js
-fetch("http://localhost:3001/v1/users/register", {
+fetch("https://book-reservation-api.vercel.app/v1/users/register", {
   method: "POST",
   body: JSON.stringify({
     name: "Raden Rahmat Wijaya",
@@ -55,7 +55,7 @@ fetch("http://localhost:3001/v1/users/register", {
 ### Login user
 
 ```js
-fetch("http://localhost:3001/v1/users/login", {
+fetch("https://book-reservation-api.vercel.app/v1/users/login", {
   method: "POST",
   body: JSON.stringify({
     email: "raden.rahmat@dev.id",
@@ -69,7 +69,7 @@ fetch("http://localhost:3001/v1/users/login", {
 ### Get all books
 
 ```js
-fetch("http://localhost:3001/v1/books")
+fetch("https://book-reservation-api.vercel.app/v1/books")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -77,7 +77,7 @@ fetch("http://localhost:3001/v1/books")
 ### Get a single book
 
 ```js
-fetch("http://localhost:3001/v1/books/1")
+fetch("https://book-reservation-api.vercel.app/v1/books/1")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -85,7 +85,7 @@ fetch("http://localhost:3001/v1/books/1")
 ### Add a new book
 
 ```js
-fetch("http://localhost:3001/v1/books", {
+fetch("https://book-reservation-api.vercel.app/v1/books", {
   method: "POST",
   body: JSON.stringify({
     title: "The Art, Wisdom, and Science of Leading an Extraordinary Life",
@@ -103,7 +103,7 @@ fetch("http://localhost:3001/v1/books", {
 ### Update a single book
 
 ```js
-fetch("http://localhost:3001/v1/books/1", {
+fetch("https://book-reservation-api.vercel.app/v1/books/1", {
   method: "PUT",
   body: JSON.stringify({
     title: "The Science of Leading an Extraordinary Life",
@@ -121,7 +121,7 @@ fetch("http://localhost:3001/v1/books/1", {
 ### Remove a book
 
 ```js
-fetch("http://localhost:3001/books/1", {
+fetch("https://book-reservation-api.vercel.app/books/1", {
   method: "DELETE",
 });
 ```
@@ -129,7 +129,7 @@ fetch("http://localhost:3001/books/1", {
 ### Sorting books with ascending order by title
 
 ```js
-fetch("http://localhost:3001/v1/books/sort?sort=asc&by=title")
+fetch("https://book-reservation-api.vercel.app/v1/books/sort?sort=asc&by=title")
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -137,7 +137,9 @@ fetch("http://localhost:3001/v1/books/sort?sort=asc&by=title")
 ### Sorting books with ascending order by author
 
 ```js
-fetch("http://localhost:3001/v1/books/sort?sort=asc&by=author")
+fetch(
+  "https://book-reservation-api.vercel.app/v1/books/sort?sort=asc&by=author"
+)
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -145,7 +147,9 @@ fetch("http://localhost:3001/v1/books/sort?sort=asc&by=author")
 ### Sorting books with descending order by title
 
 ```js
-fetch("http://localhost:3001/v1/books/sort?sort=desc&by=title")
+fetch(
+  "https://book-reservation-api.vercel.app/v1/books/sort?sort=desc&by=title"
+)
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -153,7 +157,9 @@ fetch("http://localhost:3001/v1/books/sort?sort=desc&by=title")
 ### Sorting books with descending order by author
 
 ```js
-fetch("http://localhost:3001/v1/books/sort?sort=desc&by=author")
+fetch(
+  "https://book-reservation-api.vercel.app/v1/books/sort?sort=desc&by=author"
+)
   .then((res) => res.json())
   .then((json) => console.log(json));
 ```
@@ -174,6 +180,8 @@ fetch("http://localhost:3001/v1/books/sort?sort=desc&by=author")
 
 <<<<<<< HEAD
   - /v1/books/sort?{sort=desc&by=author} -->
+
 =======
-  - /v1/books/sort?sort=desc&by=author
->>>>>>> 0499540447a06864b1a83fd1fc585d6bab231c3d
+
+- /v1/books/sort?sort=desc&by=author
+  > > > > > > > 0499540447a06864b1a83fd1fc585d6bab231c3d
