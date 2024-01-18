@@ -160,16 +160,20 @@ fetch("http://localhost:3001/v1/books/sort?sort=desc&by=author")
 
 <!-- - Sorting Books with Ascending Order by Title : Method `GET`
 
-  - /v1/books/sort?{sort=asc&by=title}
+  - /v1/books/sort?sort=asc&by=title
 
 - Sorting Books with Descending Order by Title : Method `GET`
 
-  - /v1/books/sort?{sort=desc&by=title}
+  - /v1/books/sort?sort=desc&by=title
 
 - Sorting Books with Ascending Order by Author : Method `GET`
 
-  - /v1/books/sort?{sort=asc&by=author}
+  - /v1/books/sort?sort=asc&by=author
 
 - Sorting Books with Descending Order by Title : Method `GET`
 
+<<<<<<< HEAD
   - /v1/books/sort?{sort=desc&by=author} -->
+=======
+  - /v1/books/sort?sort=desc&by=author
+>>>>>>> 0499540447a06864b1a83fd1fc585d6bab231c3d
