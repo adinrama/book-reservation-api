@@ -182,6 +182,3 @@ fetch(
   - /v1/books/sort?{sort=desc&by=author} -->
 
 =======
-
-- /v1/books/sort?sort=desc&by=author
-  > > > > > > > 0499540447a06864b1a83fd1fc585d6bab231c3d
