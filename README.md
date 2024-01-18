@@ -121,7 +121,7 @@ fetch("https://book-reservation-api.vercel.app/v1/books/1", {
 ### Remove a book
 
 ```js
-fetch("https://book-reservation-api.vercel.app/books/1", {
+fetch("https://book-reservation-api.vercel.app/v1/books/1", {
   method: "DELETE",
 });
 ```
